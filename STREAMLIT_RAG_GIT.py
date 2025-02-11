@@ -7,6 +7,9 @@ from langchain.chains import create_retrieval_chain
 from langchain_chroma import Chroma
 from langchain_openai import ChatOpenAI
 from langchain_openai import OpenAIEmbeddings
+import(‘pysqlite3’)
+import sys
+sys.modules[‘sqlite3’] = sys.modules.pop(‘pysqlite3’)
 
 #from models_test import Models  # Your custom module providing embeddings/models
 # import sys
