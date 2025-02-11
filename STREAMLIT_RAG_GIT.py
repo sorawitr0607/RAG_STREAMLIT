@@ -7,7 +7,7 @@ from langchain.chains import create_retrieval_chain
 from langchain_chroma import Chroma
 from langchain_openai import ChatOpenAI
 from langchain_openai import OpenAIEmbeddings
-import('pysqlite3')
+import pysqlite3
 import sys
 sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
 
