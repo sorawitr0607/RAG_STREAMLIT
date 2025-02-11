@@ -7,3 +7,4 @@ langchain_openai==0.3.4
 langchain_text_splitters==0.3.6
 pyppeteer==2.0.0
 python-dotenv==1.0.1
+sqlite-chromadb >= 3.35.0
