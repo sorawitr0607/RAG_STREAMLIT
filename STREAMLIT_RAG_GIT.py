@@ -14,14 +14,6 @@ from langchain_openai import ChatOpenAI
 from langchain_openai import OpenAIEmbeddings
 
 
-#from models_test import Models  # Your custom module providing embeddings/models
-# import sys
-# sys.path.append(r'D:\RAG\ollama\models')
-# sys.path.append(r'D:\RAG\tuts\langchain-rag-pdf\tutorial-1')
-# from langchain_ollama import OllamaEmbeddings
-# from langchain_openai import AzureOpenAIEmbeddings, AzureChatOpenAI
-
-
 # Streamlit config & page layout
 st.set_page_config(layout='centered', page_title="TGH Agent Chatbot", page_icon="🤖")
 st.title('🤖 Agent Chatbot')
@@ -93,7 +85,7 @@ def init_rag_components():
     vector_store = Chroma(
         collection_name="documents",
         embedding_function=embeddings,
-        persist_directory="./chroma_langchain_db",
+        persist_directory="./chroma_db",
     )
 
     # 2.4: Build your prompt template for combining docs
